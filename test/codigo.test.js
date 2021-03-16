@@ -18,4 +18,24 @@ describe('Teste classe codigo', () => {
         const calc = codigo.calculaMediana([2, 1, 4, 3]);
         expect(calc).toBe(2.5);
     })
+
+    // fibonacci
+    test('Throw erro ao enviar dado inválido', () => {
+        expect(() => codigo.fibonacci("teste")).toThrow('N inválido')
+    })
+
+    test('Sequencia fibonacci menor ou igual a 1', () => {
+        const fib = codigo.fibonacci(1)
+        expect(fib).toBe(1)
+    })
+
+    test('Sequencia fibonacci 4', () => {
+        const fib = codigo.fibonacci(4)
+        expect(fib).toBe(5)
+    })
+
+    test('Sequencia fibonacci 5', () => {
+        const fib = codigo.fibonacci(5)
+        expect(fib).toBe(8)
+    })
 })
